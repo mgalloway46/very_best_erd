@@ -27,14 +27,8 @@
         <%= select_tag(:venue_id, options_from_collection_for_select(Venue.all, :id, :name, @bookmark.venue_id), :class => "form-control") %>
       </div>
 
-      <!-- Label and input for username_id -->
-      <div class="form-group">
-        <label for="username_id" class="control-label">
-          Username
-        </label>
-
-        <%= select_tag(:username_id, options_from_collection_for_select(Username.all, :id, :email, @bookmark.username_id), :class => "form-control") %>
-      </div>
+      
+      
 
       <!-- Label and input for dish_id -->
       <div class="form-group">
