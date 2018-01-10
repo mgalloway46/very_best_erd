@@ -6,6 +6,10 @@ class Username < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :venues,
+             :through => :bookmarks,
+             :source => :venue
+
   has_many   :dishes,
              :through => :bookmarks,
              :source => :dish
