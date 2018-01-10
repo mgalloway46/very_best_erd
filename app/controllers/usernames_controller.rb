@@ -1,6 +1,6 @@
 class UsernamesController < ApplicationController
   def index
-    @usernames = Username.all
+    @usernames = Username.page(params[:page]).per(10)
   end
 
   def show
