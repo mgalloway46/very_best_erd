@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :usernames
+  # Routes for the Username resource:
+  # READ
+  get "/usernames", :controller => "usernames", :action => "index"
+  get "/usernames/:id", :controller => "usernames", :action => "show"
+
+
   # Routes for the Dish resource:
   # CREATE
   get "/dishes/new", :controller => "dishes", :action => "new"

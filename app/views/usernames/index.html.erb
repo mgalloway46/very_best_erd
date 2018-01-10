@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h1>
+    Usernames
+    <a href="/usernames/new" class="btn btn-lg btn-success">New Username</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @usernames.each do |username| %>
+      <tr>
+        <td><%= username.email %></td>
+        <td><%= username.password %></td>
+        <td>
+          <a href="/usernames/<%= username.id %>" class="btn btn-primary">Show</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
